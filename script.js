@@ -7,17 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuNameElement = document.getElementById("menuName");
     function generateRandomFishDon() {
         let randomFishDon;
-    
-        do {
-            randomFishDon = Math.floor(Math.random() * 151) + 1;
-        } while ((standardCheckbox.checked && (randomFishDon < 1 || randomFishDon > 54)) ||
-                 (lowPriceCheckbox.checked && (randomFishDon < 55 || randomFishDon > 135)) ||
-                 (popularCheckbox.checked && (randomFishDon < 136 || randomFishDon > 143)) ||
-                 (volumeCheckbox.checked && (randomFishDon < 144 || randomFishDon > 151)));
-        {
-            randomFishDon = Math.floor(Math.random() * 151) + 1;
+        while(true){
+            randomFishDon = Math.floor(Math.random()*(151-1+1)) + 1;
+            
+            if(standardCheckbox.checked&&(randomFishDon>=1||randomFishDon<=54)) break;
+            if(standardCheckbox.checked&&(randomFishDon>=55||randomFishDon<=135)) break;
+            if(standardCheckbox.checked&&(randomFishDon>=136||randomFishDon<=143)) break;
+            if(standardCheckbox.checked&&(randomFishDon>=144||randomFishDon<=151)) break;
+            
         }
-        return randomFishDon;
     }
     
 
