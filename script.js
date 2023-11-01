@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     menuNameElement.textContent = "メニュー名: メニューがありません";
                 }
+                // コンソールにメニュー番号を出力
+                console.log("メニュー番号: " + randomFishDon);
             })
             .catch(error => {
                 console.error('メニュー情報の読み込み中にエラーが発生しました:', error);
