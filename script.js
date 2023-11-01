@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     const generateButton = document.getElementById("generateButton");
-    const randomFishDonElement = document.getElementById("randomFishDon");
     const menuNameElement = document.getElementById("menuName");
 
     function generateRandomFishDon() {
@@ -14,11 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 // ランダムな番号に対応する名前を取得
                 const menuName = data[randomFishDon];
-
                 if (menuName) {
-                    menuNameElement.textContent = "今日の海鮮丼:" + menuName.name;
+                    menuNameElement.textContent = "メニュー名: " + menuName.name;
                 } else {
-                    menuNameElement.textContent = "今日の海鮮丼:メニューがありません";
+                    menuNameElement.textContent = "メニュー名: メニューがありません";
                 }
             })
             .catch(error => {
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     generateButton.addEventListener("click", function() {
         let randomFishDon = generateRandomFishDon();
-        randomFishDonElement.textContent = randomFishDon;
         updateMenuName(randomFishDon);
     });
 });
