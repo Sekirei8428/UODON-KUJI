@@ -7,30 +7,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuNameElement = document.getElementById("menuName");
 
     function generateRandomFishDon() {
-        let minRange = 1;
-        let maxRange = 154;
-        
-        if (standardCheckbox.checked) {
-            minRange = 1;
-            maxRange = 54;
-        }
-        
-        if (lowPriceCheckbox.checked) {
-            minRange = Math.max(minRange, 55);
-            maxRange = Math.min(maxRange, 135);
-        }
-        
-        if (popularCheckbox.checked) {
-            minRange = Math.max(minRange, 136);
-            maxRange = Math.min(maxRange, 143);
-        }
-        
-        if (volumeCheckbox.checked) {
-            minRange = Math.max(minRange, 144);
-            maxRange = Math.min(maxRange, 151);
-        }
+        let randomFishDon;
 
-        return Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+        do {
+            randomFishDon = Math.floor(Math.random() * 151) + 1;
+        } while ((standardCheckbox.checked && (randomFishDon < 1 || randomFishDon > 54)) ||
+                 (lowPriceCheckbox.checked && (randomFishDon < 55 || randomFishDon > 135)) ||
+                 (popularCheckbox.checked && (randomFishDon < 136 || randomFishDon > 143)) ||
+                 (volumeCheckbox.checked && (randomFishDon < 144 || randomFishDon > 151))
+        )
+        return randomFishDon;
     }
 
     function updateMenuName(randomFishDon) {
