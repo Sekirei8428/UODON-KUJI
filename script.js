@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         fetch('./menu.json')
             .then(response => response.json())
             .then(data => {
-                const menuName = data[randomFishDon];
+                const menuName = data[randomFishDon-1];
                 if (menuName) {
                     menuNameElement.textContent = "メニュー名: " + menuName.name;
                 } else {
