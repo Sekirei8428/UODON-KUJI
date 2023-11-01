@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>魚丼クジ</title>
+    <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+    <h1>魚丼クジ</h1>
+    <h2>北千住店</h2>
+    <p>チェックボックスを選択しボタンを押してください</p>
+    <label>
+        <input type="checkbox" id="standardCheckbox" checked> スタンダードを含める
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="lowPriceCheckbox" checked> ロープライスを含める
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="popularCheckbox"> ポピュラーを含める
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="volumeCheckbox"> ボリュームを含める
+    </label>
+    <br>
+    <button id="generateButton">海鮮丼を選ぶ</button>
+    <p>今日の海鮮丼: <span id="randomFishDon"></span></p>
+    <img id="seafoodDonImage" src="0.jpg" alt="">
+    <p id="menuName"></p>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* default.css */
+#toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ページタイトルのスタイル */
+  h1 {
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* 見出しのスタイル */
+  h2 {
+    color: #000; 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block; /* ブロック要素をインラインブロックに変更 */
+    border: 3px solid #00FFFF; /* 外側の水色のボーダーを設定 */
+    background-color: #00FFFF;
+    border-style: double; /* ボーダースタイルを二重線に設定 */
+    border-color:      #0000ff /* ボーダーカラーを水色に設定 */
+  }
+  
+  /* パラグラフのスタイル */
+  p {
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.0;
+  }
+  
+  /* フッターのスタイル */
+  footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left; /* 左寄せに設定 */
+  }
+  
+  /* リンクのスタイル */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  
