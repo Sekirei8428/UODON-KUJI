@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const popularCheckbox = document.getElementById("popularCheckbox");
     const volumeCheckbox = document.getElementById("volumeCheckbox");
     const menuNameElement = document.getElementById("menuName");
-
     function generateRandomFishDon() {
         let randomFishDon;
-
+    
         do {
             randomFishDon = Math.floor(Math.random() * 151) + 1;
         } while ((standardCheckbox.checked && (randomFishDon < 1 || randomFishDon > 54)) ||
                  (lowPriceCheckbox.checked && (randomFishDon < 55 || randomFishDon > 135)) ||
                  (popularCheckbox.checked && (randomFishDon < 136 || randomFishDon > 143)) ||
-                 (volumeCheckbox.checked && (randomFishDon < 144 || randomFishDon > 151))
-        )
+                 (volumeCheckbox.checked && (randomFishDon < 144 || randomFishDon > 151)));
+        
         return randomFishDon;
     }
+    
 
     function updateMenuName(randomFishDon) {
         fetch('./menu.json')
