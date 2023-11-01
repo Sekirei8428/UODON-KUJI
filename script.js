@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
                  (lowPriceCheckbox.checked && (randomFishDon < 55 || randomFishDon > 135)) ||
                  (popularCheckbox.checked && (randomFishDon < 136 || randomFishDon > 143)) ||
                  (volumeCheckbox.checked && (randomFishDon < 144 || randomFishDon > 151)));
-        
+        {
+            randomFishDon = Math.floor(Math.random() * 151) + 1;
+        }
         return randomFishDon;
     }
     
