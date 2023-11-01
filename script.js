@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 const menuName = data[randomFishDon];
 
                 if (menuName) {
-                    menuNameElement.textContent = "メニュー名: " + menuName;
+                    menuNameElement.textContent = "今日の海鮮丼:" + menuName.name;
                 } else {
-                    menuNameElement.textContent = "メニュー名: メニューがありません";
+                    menuNameElement.textContent = "今日の海鮮丼:メニューがありません";
                 }
             })
             .catch(error => {
